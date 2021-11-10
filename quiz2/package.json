@@ -1,7 +1,7 @@
 {
-  "name": "eco_semana_10",
+  "name": "quiz2",
   "version": "1.0.0",
-  "description": "Intro a firebase",
+  "description": "quiz2",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
     "start": "webpack --watch --progress",
     "visualize-bundle": "webpack --analyze"
   },
-  "author": "David Manzano",
+  "author": "Yuilsi Alvarado",
   "license": "ISC",
   "dependencies": {
     "firebase": "^9.1.2"

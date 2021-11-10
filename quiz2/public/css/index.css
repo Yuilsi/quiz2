@@ -46,7 +46,7 @@
    padding-left: 5px;
    position: relative;
 }
-.CursoText{
+.cursoText{
     color:rgb(88, 87, 87);
     text-align: left;
     font-size: 12px;
@@ -60,17 +60,7 @@
    padding-left: 15px;
 }
 
-/* Otros botones  */
-.deleteBtn{
-  background-color: rgb(112, 4, 4);
-  border-color: rgb(100, 6, 6);
-  border-radius: 2px;
-
-  position: relative;
-  top:-140px;
-  left: 50px;
-}
-.addPointsBtn{
+.puntosFinalesBtn{
     background-color: rgb(9, 81, 216);
     border-color: rgb(10, 90, 238);
     border-radius: 2px;
@@ -79,4 +69,15 @@
 
     position: relative;
     top:-42px;
+  }
+
+  /* Otros botones  */
+.eliminarBtn{
+    background-color: rgb(112, 4, 4);
+    border-color: rgb(100, 6, 6);
+    border-radius: 2px;
+  
+    position: relative;
+    top:-140px;
+    left: 50px;
   }

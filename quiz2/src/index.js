@@ -1,22 +1,21 @@
 import { initializeApp } from 'firebase/app';
 import { getDatabase } from 'firebase/database';
 import { getFirebaseConfig } from './firebase-config';
-import{initializeApp} from "firebase/app";
-import{getDatabase, ref, set, onValue, get, push} from "firebase/database";
-import {getFirebaseConfig} from "./firebase-config";
-import { courseCard } from "./courseCard";
-//---------------------------------------------------------------------------------------
+import { tarjetas } from "./tarjetas";
+
+// Inicializar firebase
+const firebaseAppConfig = getFirebaseConfig();
+const firebaseApp = initializeApp(firebaseAppConfig);
+
 const student = document.getElementById("student");
 const code = document.getElementById("code");
-const nameCourse = document.getElementById("course");
-const addCourseBtn = document.getElementById("courseBtn");
+const nameCourse = document.getElementById("nameCourse");
+const matricularBtn = document.getElementById("matricularBtn");
 const listSinBono = document.getElementById("listSinBono");
 const listBonoPlata = document.getElementById("listBonoPlata");
 const listBonoOro = document.getElementById("listBonoOro");
-const firebaseAppConfig = getFirebaseConfig();
-const firebaseApp = initializeApp(firebaseAppConfig);
-const firebaseAppConfig = getFirebaseConfig();
-const firebaseApp = initializeApp(firebaseAppConfig);
+
+
 //---------------------------------------------------------------------------------------
 
 //METODOS
@@ -56,8 +55,8 @@ function currentList(info){
         listBonoOro.innerHTML = "NA";
     }
 }
-courseBtn.addEventListener('ENTER', eventCourse);
-getCourses();
+
+
 const eventCourse = (e, event) =>{
     if(student.value!="" || code.value!="" || course.value!="" ){
         const course = {
@@ -69,8 +68,9 @@ const eventCourse = (e, event) =>{
         courseRegister(course);
         student.value='';
         code.value='';
-        course.value='';
+        nameCourse.value='';
     }
 }
-
+matricularBtn.addEventListener('ENTER', eventCourse);
+getCourses();
 
