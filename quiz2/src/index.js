@@ -19,18 +19,21 @@ const listBonoOro = document.getElementById("listBonoOro");
 //---------------------------------------------------------------------------------------
 
 //METODOS
-function courseRegister (course){                 
-    const grup = getDatabase();
-    const newCourseRef = push (ref(grup, 'courses'));
-    course["id"] = newCourseRef.key;
-    set(newCourseRef, course);
+function registrarEstudiantes (curso){      
+    console.log("ejecutar evento");           
+    const db = getDatabase();
+    const dbRef = push (ref(db,'courses'));
+    
+    curso["id"] = dbRef.key;
+    // escribir un nuevo usuario
+    set(dbRef, curso);
 }
-function getCourses(){
+function agregarCursos(){
     const grup = getDatabase();
     const refgrup =ref(grup, 'courses');
     onValue(refgrup, (snapshot) =>{
-        const data = snapshot.val();
-        currentList(data);
+        const datos = snapshot.val();
+        currentList(datos);
     });
 }
 function currentList(info){
@@ -56,21 +59,23 @@ function currentList(info){
     }
 }
 
-
+console.log(username);
 const eventCourse = (e, event) =>{
-    if(student.value!="" || code.value!="" || course.value!="" ){
+    if(student.value!="" || code.value!="" || nameCourse.value!="" ){
+        console.log("ejecuto evento")
         const course = {
+        
             student: student.value,
             code: code.value,
-            course: course.value,
+            nameCourse: nameCourse.value,
             points: 0
         }
-        courseRegister(course);
+        registrarEstudiantes(course);
         student.value='';
         code.value='';
         nameCourse.value='';
     }
 }
-matricularBtn.addEventListener('ENTER', eventCourse);
-getCourses();
+matricularBtn.addEventListener('click', eventCourse);
+agregarCursos();
 
