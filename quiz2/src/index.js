@@ -8,7 +8,7 @@ import { courseCard } from "./courseCard";
 //---------------------------------------------------------------------------------------
 const student = document.getElementById("student");
 const code = document.getElementById("code");
-const courseName = document.getElementById("course");
+const nameCourse = document.getElementById("course");
 const addCourseBtn = document.getElementById("courseBtn");
 const listSinBono = document.getElementById("listSinBono");
 const listBonoPlata = document.getElementById("listBonoPlata");

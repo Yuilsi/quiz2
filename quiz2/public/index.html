@@ -10,15 +10,33 @@
     </head>
 
     <body>
-        <h1 id="titulo">Hola mundo html</h1>
-        <h1 class="titulo2">Titulo 2</h1>
-        <h1>Hola mundo html</h1>
-        <h1 class="titulo2" >Titulo 2</h1>
+        <h1 id="titulo">Profes Inc.</h1>
 
-        <input id="username" type="text" placeholder="Ingresa tu nombre de usuario" />
-        <input id="password" type="password" placeholder="Ingresa tu contraseña" />
-        <button id="registrar_btn">Registrarse</button>
+       
+
+        <div id = "inputs">
+        <input id="student" type="text" placeholder="Estudiante"/>
+        <input id="code" type="text" placeholder="Código" />
+        <input id="nameCourse" type="text" placeholder="Curso" />
+    </div>
+    
+    <button id = "matricularBtn">Matricular</button> 
+
+    <div id= "tarjetaBonus">
+        <div class = "tarjeta">
+            <h2>Sin bono</h2>
+            <div id = listSinBono>Vacio</div>
+        </div>
+        <div class = "tarjeta">
+            <h2>Bono plata + 0,3</h2>
+            <div id = listBonoPlata>Vacio</div>
+        </div>
+        <div class = "tarjeta">
+            <h2>Bono oro + 0,5</h2>
+            <div id = listBonoOro>Vacio</div>
+        </div>
+    </div>
     </body>
-    <script src="main.js"></script>
+    <script src="bundle.js"></script>
 </html>
 
